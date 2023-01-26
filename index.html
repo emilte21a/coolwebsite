@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+
+    <div class="section1">
+
+        <div class="nameDiv">
+
+            <h1 class="bigText">
+                Hej
+            </h1>
+
+
+            <p class="question1">
+                Vad heter du?:
+            </p>
+
+
+
+            <form id="namnForm">
+
+                <label class="nameLabel">
+                    <input class="input1" autocomplete="off" type="text" required pattern="[a-zA-Z]*" onkeydown="inputHidden()" >
+                </label>
+            </form>
+
+
+
+            <button type="button" class="send-button" onclick="showValue()">
+                <a class="sendDown" id="sendDown" href="#sect2">Confirm</a>
+            </button>
+
+        </div>
+    </div>
+
+
+    <div id="sect2" class="section2 hidden">
+
+        <header class="welcome">
+
+            Välkommen <div id="ID"> </div>
+            <button type="button" class="startaQuiz">Starta quizen!</button>
+        </header>
+        
+        
+        <form class="form2 hidden">
+            <!--<h1 class="bigText2">Svara på dessa tre frågor så gissar vi din personlighet!</h1>-->
+            <span class="goldenrod"> a</span>
+            <!--Fråga 1-->
+            <h1 class="bigText">Är du en kreativ person</h1>
+            <div class="answers blurred">
+                <label class="label1">
+                    <div class="imageContainer">
+                        <a class="sendvalue">
+                            <input type="radio" name="q1" value="0">
+                            <img class="imageD" src="banan.webp" alt="banan" width="80%">
+                            <p class="cardText">Håller med</p>
+                        </a>
+                    </div>
+
+                </label>
+
+                <label class="label1">
+
+                    <div class="imageContainer">
+                        <a class="sendvalue">
+                            <input type="radio" name="q1" value="1">
+                            <img class="imageD" src="strawberr.webp" alt="strawberry" width="80%">
+                            <p class="cardText">Håller ej med</p>
+                        </a>
+                    </div>
+
+                </label>
+            </div>
+
+            <span class="goldenrod"> a</span>
+            <!--Fråga 2-->
+            <h1 class="bigText">Om du hamnar i en konflikt vem hjälper du först? Andra eller dig själv?</h1>
+            <div class="answers blurred">
+                <label class="label1">
+                    <div class="imageContainer">
+                        <a class="sendvalue">
+
+                            <input type="radio" name="q2" value="2">
+                            <img class="imageD" src="nothelp.webp" alt="hjälpinte" width="80%">
+
+                            <p class="cardText">Dig själv</p>
+                        </a>
+                    </div>
+
+                </label>
+
+                <label class="label1">
+
+                    <div class="imageContainer">
+                        <a class="sendvalue">
+                            <input type="radio" name="q2" value="3">
+                            <img class="imageD" src="helping.webp" alt="hjälpande" width="50%">
+                            <p class="cardText">Andra</p>
+                        </a>
+                    </div>
+
+                </label>
+            </div>
+
+            <span class="goldenrod"> a</span>
+            <!--Fråga 3-->
+            <h1 class="bigText">Gillar du sociala situationer?</h1>
+            <div class="answers blurred">
+                <label class="label1">
+                    <div class="imageContainer">
+                        <a class="sendvalue">
+
+                            <input type="radio" name="q3" value="4">
+                            <img class="imageD" src="social.webp" alt="party" width="80%">
+
+                            <p class="cardText">Jag älskar att vara social!</p>
+                        </a>
+                    </div>
+
+                </label>
+
+                <label class="label1">
+
+                    <div class="imageContainer">
+                        <a class="sendvalue">
+                            <input type="radio" name="q3" value="5">
+                            <img class="imageD" src="alone.webp" alt="ensam" width="80%">
+                            <p class="cardText"> Jag föredrar att vara hemma ensam.</p>
+                        </a>
+                    </div>
+
+                </label>
+            </div>
+            <span class="goldenrod"> a</span>
+            <button type="button" class="send-button1">Kolla din personlighet!</button>
+
+        </form>
+
+
+    </div>
+
+
+
+    <section class="finished hidden">
+
+        <div class="finishDiv">
+            Nu har vi resultatet.
+            <span>
+
+                <p class="winner"> <div id="ID"></div>du fick <span class="points-label">0</span> poäng</p>
+            </span>
+            
+            <div class="PersonalityCard">
+                Baserat på dina svar så är du är en:
+                
+                <div class="Personality1 hidden">
+                    "Röd Rebecka"
+                    <p class="CardText">
+                        Dina typiska personlighetsdrag är:
+                    </p>
+                    <ul style="list-style-type:disc">
+                    <li>Extrovert</li>
+                    <li>Positiv inställning</li>
+                    <li>Dominant</li>
+                    <li>Att gå rakt på sak</li>
+                    </ul>
+                </div>
+                
+                <div class="Personality2 hidden">
+                    "Gul Gustav"
+                    <p class="CardText">
+                        Dina typiska personlighetsdrag är:
+                    </p>
+                    <ul style="list-style-type:disc">
+                    <li>Extrovert</li>
+                    <li>Entusiastisk</li>
+                    <li>Känslig</li>
+                    <li>Socialisering</li>
+                    </ul>
+                </div>
+
+                <div class="Personality3 hidden">
+                    "Grön Gabriella"
+                    <p class="CardText">
+                        Dina typiska personlighetsdrag är:
+                    </p>
+                    <ul style="list-style-type:disc">
+                    <li>Vänlig</li>
+                    <li>Gillar trygghet</li>
+                    <li>Lojal</li>
+                    <li>Tålmodig</li>
+                    </ul>
+                </div>
+
+                <div class="Personality4 hidden">
+                    "Blå Billy"
+                    <p class="CardText">
+                        Dina typiska personlighetsdrag är:
+                    </p>
+                    <ul style="list-style-type:disc">
+                    <li>Diplomatisk</li>
+                    <li>Introvert</li>
+                    <li>kritisk</li>
+                    <li>Nogrann</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <a class="tryagain" href="./index.html">Spela igen</a>
+        </div>
+    </section>
+
+</body>
+
+</html>

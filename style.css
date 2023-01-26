@@ -1,0 +1,420 @@
+* {
+    box-sizing: border-box
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+@keyframes transitionIn {
+    from {
+
+        transform: translateX(-100%);
+        filter: blur(10px);
+        animation-delay: 1s;
+    }
+
+    to {
+        transform: translateX(0);
+        filter: blur(0);
+    }
+}
+
+@keyframes AnimateBG {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+
+body {
+    height: 100%;
+    transition: background 1s ease;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 10;
+    letter-spacing: 1vh;
+    margin: 0;
+    background-color: black;
+}
+
+
+.answers {
+    
+    
+    animation: transitionIn 2s ease-in-out;
+    display: grid;
+    grid-auto-flow: column;
+    place-items: center;
+    padding: 0;
+    gap: 10%;
+}
+
+.section1 {
+    background-color: black;
+    animation: transitionIn 2s ease-in-out;
+    padding-top: 30vh;
+    font-size: 5vh;
+    text-align: center;
+    margin: auto;
+    color: #e2ca9a;
+    height: 100vh;
+    overflow-x: hidden;
+    max-height: 1080px;
+
+}
+
+.section2 {
+    background-size: 300% 300%;
+    background-image: linear-gradient(-126deg,
+            #1f291e 0%,
+            #455f44 25%,
+            #4e864d 50%,
+            #455f44 75%,
+            #194618 100%);
+
+    animation: AnimateBG 40s ease-in-out infinite;
+    transition: background 4s ease/ease-in-out;
+    text-align: center;
+    font-size: 100px;
+    margin: auto;
+    color: #e2ca9a;
+    height: 100vh;
+    overflow-x: hidden;
+
+}
+
+.welcome {
+    padding: 5%;
+    font-size: 60%;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.nameDiv {
+    display: grid;
+    gap: 3vh;
+}
+
+.input1 {
+    color: black;
+    font-size: 40px;
+    transition: 240ms ease-in-out;
+    width: 70%;
+    max-width: 300px;
+    margin: auto;
+}
+
+.input1:focus {
+    background-color: #424242;
+    border: none;
+    color: white;
+}
+
+.question1 {
+    margin: auto;
+    width: 90%;
+}
+
+.question {
+    font-size: 30%;
+}
+
+.tryagain {
+    text-decoration: none;
+    color: white;
+    background-color: #4e864d;
+    padding: 2%;
+    transition: all 200ms ease-in-out;
+    border: #e2ca9a solid 2px;
+}
+
+.tryagain:hover {
+    background-color: #4e864d;
+    color: gold;
+    box-shadow: 0px 0px 100px -20px gold;
+    
+    
+}
+
+.finished {
+    font-size: 150%;
+    width: 50%;
+    color: #e2ca9a;
+    margin: auto;
+    margin-top: 6%;
+    padding: 0.5%;
+
+}
+
+.finishDiv {
+    font-size: 150%;
+    transition: all 1s ease-in-out;
+    display: grid;
+    grid-auto-flow: row;
+    place-items: center;
+    color: #cea961;
+    background-color: white;
+    padding: 5%;    
+    border-radius: 10px;
+}
+
+.sendvalue{
+    display: grid;
+   grid-auto-flow: column;
+    place-items: center;
+}
+
+.imageContainer {
+    background-color: white;
+    padding: 1rem;
+    line-height: 1rem;
+    padding: 7%;
+    
+    transition: 500ms ease-in-out;
+    width: 535px;
+    height: 220px;
+    box-shadow: rgb(41, 41, 41) 15px 30px 40px -30px;
+    transition: 300ms ease-in-out;
+}
+
+.imageContainer:hover {
+    transform: scale(1.1);
+    box-shadow: rgb(0, 0, 0) 0px 60px 100px -30px;
+}
+
+.cardText {
+    font-size: 3vh;
+    line-height: 150%;
+    color: black;
+}
+
+.send-button {
+    background-color: black;
+    border: none;
+    transition: all 500ms ease-in-out;
+}
+
+.send-button:hover {
+    transform: scale(1.1);
+}
+
+.send-button1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 10;
+    font-size: 30%;
+    display: flex;
+    place-items: center;
+    letter-spacing: 0.5vh;
+    margin: auto;
+    padding: 1%;
+    border-radius: 100px;
+    border: none;
+    box-shadow: inset black 2px 5px 25px -10px;
+    transition: all ease-in-out 300ms;
+}
+
+
+.send-button1:hover {
+    opacity: 0.8;
+    transform: scale(1.1);
+    animation-delay: 50ms;
+}
+
+
+.sendDown {
+    text-decoration: none;
+    border-radius: 300px;
+    padding: 5px;
+    color: white;
+    border: none;
+    font-size: 40px;
+    background-image: linear-gradient(rgb(56, 77, 59), rgb(39, 107, 56));
+    transition: 2s ease-in-out;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 10;
+    letter-spacing: 1vh;
+
+}
+
+.hidden {
+    transition: 2s ease-in-out;
+    overflow-y: hidden;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    margin: 0;
+    padding: 0;
+
+}
+
+.hiddenDirect {
+    overflow-y: hidden;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.startaQuiz{
+  background-color:#455f44;
+  border-radius: 10px;
+  font-size: 5vh;
+  color:white;
+  padding: 5px;
+  border: solid #e2ca9a;
+  transition: 500ms ease-in-out all;
+}
+
+.startaQuiz:hover{
+    box-shadow: black 0px 10px 7px -8px;
+    transform:scale(1.2);
+
+}
+
+.goldenrod {
+    background-color: #e2ca9a;
+    height: 5em;
+    border-radius: 100px;
+    width: 95%;
+    margin: auto;
+    font-size: 1px;
+}
+
+.personalityCard{
+    font-style: normal;
+    background-color: white;
+    
+}
+
+.bigText {
+    line-height: 150%;
+    padding-left: 10%;
+    padding-right: 10%;
+    font-size: 50%;
+    font-weight: lighter;
+}
+
+.bigText2 {
+    line-height: 150%;
+    padding-left: 10%;
+    padding-right: 10%;
+    font-size: 50%;
+    font-weight: bold;
+    color: gold;
+    position: fixed;
+}
+
+.CardText{
+    font-size: 110%;
+    
+}
+
+form {
+    display: grid;
+    gap: 5vh;
+    margin-bottom: 5vh;
+}
+
+.form2 {
+    opacity: 1;
+    filter: none;
+}
+
+.blurred {
+    filter: blur(8px);
+    transition: all 1s;
+    opacity: 0;
+}
+
+.show {
+    filter: blur(0px);
+    opacity: 1;
+}
+
+input[type='radio'] {
+    display: none;
+}
+
+input[type='radio']:checked+.imageD {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+.imageD {
+
+    max-width: 294.39px;
+    max-height: 133px;
+    opacity: 0.6;
+    transition: all 300ms ease-in-out;
+}
+
+.imageD:hover {
+    opacity: 0.4;
+}
+
+
+
+@media (prefes-reduced-motion) {
+    .blurred {
+        transition: none;
+    }
+}
+
+
+@media screen and (max-width:430px) {
+    .form2 {
+        font-size: 40%;
+    }
+
+
+    .imageContainer {
+        height: 240px;
+    }
+
+    .answers {
+        gap: 1px;
+    }
+
+    .cardText {
+        font-size: 60%;
+        letter-spacing: 1px;
+    }
+
+    .label1 {
+        width: 70%;
+    }
+
+    .send-button1 {
+        height: 50px;
+        font-size: 70%;
+    }
+
+    .finished {
+        margin-top: 200px;
+        width: 100%;
+    }
+
+    .finishDiv {
+        letter-spacing: 2px;
+        font-size: 70%;
+
+    }
+
+    .tryagain {
+        margin: 50px;
+        padding: 10px;
+        letter-spacing: 10px;
+        font-size: 20px;
+    }
+}
