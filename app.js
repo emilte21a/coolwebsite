@@ -9,7 +9,7 @@ let sendButton1 = document.querySelector(".send-button1");
 let sendDown = document.querySelector('sendDown');
 let finishedScreen = document.querySelector(".finished");
 let pointsLabel = document.querySelector(".points-label");
-
+let finishDiv = document.querySelector(".finishDiv");
 //Personligheter nedan
 
 let pers1 = document.querySelector(".Personality1");
@@ -23,6 +23,7 @@ startQuiz.addEventListener("click", startQuizFunction);
 sendButton1.addEventListener("click", handleForm); //Skickar antalet poäng til finishedscreen
 
 //sendButton.addEventListener("click", continueNext); //skickar dig till section2
+
 
 
 function continueNext() {
@@ -89,15 +90,19 @@ function handleForm() {
     
         if (points == 6) {
             pers1.classList.toggle("hidden");
+            finishDiv.classList.toggle("Red");
         }
         else if (points == 7) {
             pers2.classList.toggle("hidden");
+            finishDiv.classList.toggle("Yellow");
         }
         else if (points == 8) {
             pers3.classList.toggle("hidden");
+            finishDiv.classList.toggle("Green");
         }
         else if (points == 9){
             pers4.classList.toggle("hidden");
+            finishDiv.classList.toggle("Blue");
         }
     }
 
