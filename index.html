@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Experience</title>
+    <title>Personlighets test</title>
     <link rel="stylesheet" href="./style.css">
     <script src="app.js" defer></script>
 </head>
@@ -19,17 +19,13 @@
             <h1 class="bigText">
                 Hej
             </h1>
-
-
-            <p class="question1">
-                Vad heter du?:
-            </p>
-
-
+            
+            <p class="question">Skriv ditt namn för att göra ett personlighetstest!</p>
 
             <form id="namnForm">
 
                 <label class="nameLabel">
+                    Vad heter du?:
                     <input class="input1" autocomplete="off" type="text" required pattern="[a-zA-Z]*" onkeydown="inputHidden()" >
                 </label>
             </form>
@@ -60,9 +56,9 @@
             <h1 class="bigText">Är du en kreativ person</h1>
             <div class="answers blurred">
                 <label class="label1">
-                    <div class="imageContainer">
+                    <div class="imageContainer" tabindex=0>
                         <a class="sendvalue">
-                            <input type="radio" name="q1" value="0">
+                            <input type="radio" name="q1" value="0" required>
                             <img class="imageD" src="banan.webp" alt="banan" width="80%">
                             <p class="cardText">Håller med</p>
                         </a>
@@ -72,9 +68,9 @@
 
                 <label class="label1">
 
-                    <div class="imageContainer">
+                    <div class="imageContainer" tabindex=0>
                         <a class="sendvalue">
-                            <input type="radio" name="q1" value="1">
+                            <input type="radio" name="q1" value="1" required>
                             <img class="imageD" src="strawberr.webp" alt="strawberry" width="80%">
                             <p class="cardText">Håller ej med</p>
                         </a>
@@ -88,10 +84,10 @@
             <h1 class="bigText">Om du hamnar i en konflikt vem hjälper du först? Andra eller dig själv?</h1>
             <div class="answers blurred">
                 <label class="label1">
-                    <div class="imageContainer">
+                    <div class="imageContainer" tabindex=0>
                         <a class="sendvalue">
 
-                            <input type="radio" name="q2" value="2">
+                            <input type="radio" name="q2" value="2" required>
                             <img class="imageD" src="nothelp.webp" alt="hjälpinte" width="80%">
 
                             <p class="cardText">Dig själv</p>
@@ -102,9 +98,9 @@
 
                 <label class="label1">
 
-                    <div class="imageContainer">
+                    <div class="imageContainer" tabindex=0>
                         <a class="sendvalue">
-                            <input type="radio" name="q2" value="3">
+                            <input type="radio" name="q2" value="3" required>
                             <img class="imageD" src="helping.webp" alt="hjälpande" width="50%">
                             <p class="cardText">Andra</p>
                         </a>
@@ -117,11 +113,11 @@
             <!--Fråga 3-->
             <h1 class="bigText">Gillar du sociala situationer?</h1>
             <div class="answers blurred">
-                <label class="label1">
-                    <div class="imageContainer">
+                <label class="label1" >
+                    <div class="imageContainer" tabindex=0>
                         <a class="sendvalue">
 
-                            <input type="radio" name="q3" value="4">
+                            <input type="radio" name="q3" value="4" required>
                             <img class="imageD" src="social.webp" alt="party" width="80%">
 
                             <p class="cardText">Jag älskar att vara social!</p>
@@ -132,9 +128,9 @@
 
                 <label class="label1">
 
-                    <div class="imageContainer">
+                    <div class="imageContainer" tabindex=0>
                         <a class="sendvalue">
-                            <input type="radio" name="q3" value="5">
+                            <input type="radio" name="q3" value="5" required>
                             <img class="imageD" src="alone.webp" alt="ensam" width="80%">
                             <p class="cardText"> Jag föredrar att vara hemma ensam.</p>
                         </a>
@@ -166,7 +162,7 @@
                 
                 <div class="Personality1 hidden">
                     "Röd Rebecka"
-                    <p class="CardText">
+                    <p class="CardText2">
                         Dina typiska personlighetsdrag är:
                     </p>
                     <ul style="list-style-type:disc">
@@ -179,7 +175,7 @@
                 
                 <div class="Personality2 hidden">
                     "Gul Gustav"
-                    <p class="CardText">
+                    <p class="CardText2">
                         Dina typiska personlighetsdrag är:
                     </p>
                     <ul style="list-style-type:disc">
@@ -192,7 +188,7 @@
 
                 <div class="Personality3 hidden">
                     "Grön Gabriella"
-                    <p class="CardText">
+                    <p class="CardText2">
                         Dina typiska personlighetsdrag är:
                     </p>
                     <ul style="list-style-type:disc">
@@ -205,7 +201,7 @@
 
                 <div class="Personality4 hidden">
                     "Blå Billy"
-                    <p class="CardText">
+                    <p class="CardText2">
                         Dina typiska personlighetsdrag är:
                     </p>
                     <ul style="list-style-type:disc">

@@ -126,7 +126,7 @@ body {
 }
 
 .question {
-    font-size: 30%;
+    font-size: 60%;
 }
 
 .tryagain {
@@ -185,6 +185,10 @@ body {
     height: 220px;
     box-shadow: rgb(41, 41, 41) 15px 30px 40px -30px;
     transition: 300ms ease-in-out;
+}
+
+.imageContainer:focus{
+    border: solid black 5px;
 }
 
 .imageContainer:hover {
@@ -315,7 +319,7 @@ body {
     position: fixed;
 }
 
-.CardText{
+.CardText2{
     font-size: 110%;
     
 }
@@ -383,18 +387,33 @@ input[type='radio']:checked+.imageD {
 }
 
 
-@media screen and (max-width:430px) {
+@media screen and (max-width:1218px) {
     .form2 {
         font-size: 40%;
     }
 
 
     .imageContainer {
-        height: 240px;
+        height: 180px;
+        width: 300px;
+        padding: 3%;
+        
+    }
+
+    .bigText{
+        padding-left: 5%;
+        padding-right: 5%;
+        line-height: 100%;
     }
 
     .answers {
-        gap: 1px;
+        gap: 0;
+        
+    }  
+
+    .imageD{
+        width: 40%;
+        
     }
 
     .cardText {
@@ -402,8 +421,14 @@ input[type='radio']:checked+.imageD {
         letter-spacing: 1px;
     }
 
+    .sendvalue{
+        height: 100%;
+        font-size: 50%;
+        grid-auto-flow: row;
+    }
+
     .label1 {
-        width: 70%;
+        margin: auto;
     }
 
     .send-button1 {
@@ -427,5 +452,27 @@ input[type='radio']:checked+.imageD {
         padding: 10px;
         letter-spacing: 10px;
         font-size: 20px;
+    }
+}
+
+@media screen and (max-width:613px) {
+
+    .imageContainer {
+        height: 180px;
+        width: 150px ;
+        padding: 3%;
+    }
+
+    .question {
+        font-size: 40%;
+        padding: 2%;
+    }
+
+    .welcome{
+        font-size: 40px;
+    }
+
+    .send-button1{
+        font-size: 18px;
     }
 }

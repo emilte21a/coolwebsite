@@ -10,6 +10,7 @@ let sendDown = document.querySelector('sendDown');
 let finishedScreen = document.querySelector(".finished");
 let pointsLabel = document.querySelector(".points-label");
 let finishDiv = document.querySelector(".finishDiv");
+let imgContainer = document.querySelector(".imageContainer");
 //Personligheter nedan
 
 let pers1 = document.querySelector(".Personality1");
@@ -24,6 +25,9 @@ sendButton1.addEventListener("click", handleForm); //Skickar antalet poäng til 
 
 //sendButton.addEventListener("click", continueNext); //skickar dig till section2
 
+imgContainer.addEventListener("keydown", (event) => {
+    "input[type='radio']:checked"
+});
 
 
 function continueNext() {
@@ -36,7 +40,7 @@ function startQuizFunction() {
     welcomeHeader.classList.toggle("hiddenDirect");
 }
 
-function inputHidden() { //Gömmer submit knappen om input är tom
+function inputHidden() { //Gömmer submit knappen om input är tom eller om den innehåller nummer
     var letterNumber = /^[0-9]+$/;
 
     if (input.value == "" || input.value.match(letterNumber)) {
@@ -55,7 +59,8 @@ function inputHidden() { //Gömmer submit knappen om input är tom
 });
     }
 }
-  
+
+
 
 function showValue() {//visar namn input i diven med id' "ID"
     var name = input.value;
